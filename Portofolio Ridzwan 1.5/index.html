@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhamad Ridzwansyah – Portfolio 2026</title>
+<meta name="description" content="Portfolio Muhamad Ridzwansyah: IT support, jaringan, dan pengembangan website.">
+<link rel="icon" href="img/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
+<noscript><style>#loader{display:none!important}</style></noscript>
+<style>
+:root{
+  --bg:#03060c; --navy:#0b3358; --glow:#1f7bd0; --red:#b3122b;
+  --silver:#c4c8ce; --text:#e6e9ee; --muted:#8f98a6; --pill:#bcd9f5;
+  --head:'Anton','Impact','Arial Narrow',sans-serif;
+  --body:'Montserrat','Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+html{background:var(--bg)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(rgba(3,6,12,.5),rgba(3,6,12,.72)),url("img/bg-nebula.webp") center/cover no-repeat}
+body{color:var(--text);font:400 15px/1.7 var(--body);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--pill);outline-offset:3px}
+.silver{background:linear-gradient(180deg,#eceef1,#9aa0a9);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1,h2{font-family:var(--head);font-weight:400;letter-spacing:.02em;line-height:1}
+section{position:relative;padding:96px 6vw}
+.wrap{max-width:1100px;margin:0 auto}
+
+/* Navigasi */
+.logo{position:fixed;top:10px;left:20px;z-index:20;display:block;line-height:0}
+.logo img{width:46px;height:46px}
+nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:20;display:flex;gap:6px;padding:5px;border-radius:99px;background:rgba(3,6,12,.7);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.08)}
+nav a{padding:6px 16px;border-radius:99px;font-size:12px;font-weight:600;text-decoration:none;color:var(--muted);transition:background .2s,color .2s}
+nav a.on{background:var(--pill);color:#06192e}
+
+/* Hero */
+#hero{min-height:100vh;position:relative;display:grid;grid-template-columns:minmax(240px,370px) 1fr;align-items:center;gap:4vw;padding:90px min(36vw,380px) 60px 0;background:radial-gradient(120% 90% at 85% 100%,rgba(11,51,88,.75),transparent 62%)}
+.d-shape{position:relative;aspect-ratio:1/1.05;width:100%}
+.d-shape::before,.d-shape::after{content:"";position:absolute;inset:0;border-radius:0 999px 999px 0}
+.d-shape::before{background:var(--red);transform:translate(14px,14px)}
+.d-shape::after{background:#000}
+.d-shape img{position:absolute;inset:0;z-index:2;width:100%;height:100%;object-fit:cover;object-position:50% 12%;border-radius:0 999px 999px 0}
+.hero-text h1{font-size:clamp(48px,7.2vw,104px)}
+.hero-text h1 small{display:inline-block;margin-left:.3em;font-size:.38em;color:var(--silver);-webkit-text-fill-color:var(--silver)}
+.role{margin-top:14px;font-weight:600;font-size:15px;color:var(--silver)}
+.who{color:var(--muted);font-size:14px}
+.menu{margin-top:34px;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.menu a{padding:4px 0;font-size:13px;font-weight:600;letter-spacing:.14em;text-decoration:none;text-transform:uppercase;color:var(--text);border-bottom:1px solid transparent;transition:color .2s,padding-left .2s}
+.menu a:hover{color:var(--pill);padding-left:10px}
+
+/* Tentang */
+#about{background:linear-gradient(180deg,transparent,rgba(4,16,29,.55) 50%,transparent)}
+.about-grid{display:grid;grid-template-columns:minmax(240px,380px) 1fr;gap:5vw;align-items:end}
+.portrait{position:relative;align-self:stretch;display:flex;align-items:flex-end}
+.portrait::before{content:"";position:absolute;left:50%;bottom:6%;width:115%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(31,123,208,.85),rgba(31,123,208,0) 68%)}
+.portrait img{position:relative;width:100%;max-height:640px;object-fit:contain;object-position:bottom}
+.hello{font-size:13px;color:var(--muted)}
+.name{font-family:var(--head);font-size:30px;margin-bottom:26px}
+h2{font-size:clamp(34px,5vw,54px);margin-bottom:14px}
+.about-text>p{max-width:62ch;color:#cfd5dd}
+h3{margin:30px 0 12px;font:700 17px var(--body);color:#7fb8ee}
+.skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
+.skills span{padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);font-size:13px;font-weight:600}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.two h3{margin-top:30px}
+.list{list-style:none;font-size:13.5px;color:#cfd5dd}
+.list li{padding:6px 0 6px 16px;position:relative}
+.list li::before{content:"";position:absolute;left:0;top:14px;width:7px;height:7px;border-radius:50%;background:var(--pill)}
+.list b{display:block;color:#fff;font-weight:600}
+.grp{margin-bottom:14px}
+.grp h5{font:600 12px var(--body);color:var(--muted);margin-bottom:6px}
+.list em{display:block;font-style:normal;font-size:12px;color:var(--muted)}
+.list li{padding-bottom:10px}
+
+/* Project */
+#project{background:radial-gradient(90% 60% at 10% 0%,rgba(31,123,208,.22),transparent 70%)}
+.head-c{text-align:center;margin-bottom:44px}
+.head-c p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px}
+.card{display:flex;flex-direction:column;background:#070d17;border:1px solid rgba(255,255,255,.08);border-radius:6px;overflow:hidden;text-align:left;color:inherit;font:inherit;cursor:pointer;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--pill);transform:translateY(-3px)}
+.card img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;background:#fff}
+.card div{padding:16px 18px 20px}
+.tag{font-size:11px;font-weight:600;color:var(--pill)}
+.card h4{margin:2px 0 6px;font:700 17px var(--body)}
+.card p{font-size:13.5px;color:var(--muted)}
+dialog{margin:auto;width:min(1100px,94vw);max-height:92vh;border:1px solid rgba(255,255,255,.15);border-radius:8px;background:#05080f;color:var(--text);overflow:auto}
+dialog::backdrop{background:rgba(0,0,0,.8)}
+dialog img{width:100%;background:#fff}
+dialog .bar{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 16px;background:#05080f;border-bottom:1px solid rgba(255,255,255,.1)}
+dialog button{padding:6px 16px;border:0;border-radius:99px;background:var(--pill);color:#06192e;font:600 13px var(--body);cursor:pointer}
+
+/* Kontak */
+#contact{background:radial-gradient(100% 80% at 50% 100%,rgba(11,51,88,.8),transparent 70%);min-height:80vh;display:flex;align-items:center}
+.contact-grid{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:6vw;align-items:center}
+.circle{aspect-ratio:1;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 50% 30%,#2a6fb0,#06192e);border:3px solid rgba(255,255,255,.2)}
+.circle img{width:100%;height:100%;object-fit:cover;object-position:50% 8%}
+.contact-grid h2{font-size:clamp(34px,5vw,54px)}
+.contact-grid p{max-width:46ch;color:#cfd5dd;margin-bottom:22px}
+.btn{display:inline-block;padding:12px 24px;border-radius:99px;background:var(--pill);color:#06192e;font-weight:700;text-decoration:none;font-size:14px}
+.links{display:flex;flex-wrap:wrap;gap:14px}
+.ico{display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(6px);transition:background .2s,transform .2s,border-color .2s}
+.ico img{width:26px;height:26px;object-fit:contain}
+.ico:hover{background:rgba(188,217,245,.28);border-color:var(--pill);transform:translateY(-3px)}
+.thanks{margin-top:44px;font:400 clamp(44px,8vw,96px)/1 var(--head)}
+footer{display:flex;flex-direction:column;align-items:center;gap:8px;background:rgba(3,6,12,.55);padding:22px 6vw;text-align:center;font-size:12px;color:var(--muted);border-top:1px solid rgba(255,255,255,.07)}
+
+
+/* Loader petir */
+#loader{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:#02040a;transition:opacity .6s,visibility .6s;cursor:pointer}
+#loader.out{opacity:0;visibility:hidden}
+#loader canvas{position:absolute;inset:0;width:100%;height:100%}
+#loader h2{position:relative;font-size:clamp(26px,5vw,48px);text-align:center;padding:0 6vw}
+#loader h2 b{display:block;color:#3b9cff;font-weight:400}
+.bar{position:relative;width:min(260px,60vw);height:3px;background:rgba(255,255,255,.15);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:#3b9cff;animation:fill 2.3s ease-out forwards}
+@keyframes fill{to{width:100%}}
+#loader small{position:relative;color:var(--muted);font-size:11px}
+body.loading{overflow:hidden}
+
+/* Efek masuk */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.js .rv.in{opacity:1;transform:none}
+.caret{display:inline-block;width:2px;height:1em;margin-left:3px;vertical-align:-2px;background:var(--pill);animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* Foto berganti saat hover */
+.portrait{position:relative;cursor:pointer}
+.portrait img.alt{position:absolute;left:0;bottom:0;width:100%;height:100%;opacity:0;transition:opacity .5s}
+.portrait img.main{transition:opacity .5s}
+.portrait:hover img.alt,.portrait.flip img.alt{opacity:1}
+.portrait:hover img.main,.portrait.flip img.main{opacity:0}
+.hint{position:absolute;left:50%;bottom:-26px;transform:translateX(-50%);font-size:11px;color:var(--muted);white-space:nowrap}
+
+/* Statistik + tab */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:640px;margin:0 auto 34px}
+.stat{padding:16px;border-radius:14px;text-align:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(6px)}
+.stat b{display:block;font:400 38px/1.1 var(--head);color:#fff}
+.stat span{font-size:12px;color:var(--muted)}
+.tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.tabs button{padding:9px 20px;border-radius:99px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);color:var(--muted);font:600 13px var(--body);cursor:pointer;transition:all .2s}
+.tabs button[aria-selected=true]{background:var(--pill);color:#06192e;border-color:var(--pill)}
+.panel{display:none;animation:pin .5s}
+.panel.on{display:block}
+@keyframes pin{from{opacity:0;transform:translateY(12px)}}
+.card.c img{object-fit:contain;object-position:center;background:#0b1220;padding:6px}
+.certs{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+.cert,.tile{padding:22px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);transition:transform .2s,border-color .2s}
+.cert:hover,.tile:hover{transform:translateY(-4px);border-color:var(--pill)}
+.cert b{display:block;font-size:16px}.cert span{font-size:13px;color:var(--muted)}
+.techs{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:14px}
+.tile{text-align:center;font-weight:600;font-size:14px}
+.lg{display:grid;place-items:center;width:58px;height:58px;margin:0 auto 10px;border-radius:14px;background:#f4f6f9}
+.lg img{width:34px;height:34px;object-fit:contain}
+
+@media (max-width:760px){.stats{gap:8px}.stat b{font-size:30px}nav a{padding:6px 9px;font-size:11.5px}}
+
+/* Lanyard */
+.lan{position:absolute;top:0;right:2vw;width:min(34vw,360px);height:100%;z-index:5;pointer-events:none}
+.lan canvas{position:absolute;inset:0;width:100%;height:100%}
+.lcard{position:absolute;left:0;top:0;transform-origin:50% 0;pointer-events:auto;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none;will-change:transform}
+.lcard.drag{cursor:grabbing}
+.lcard img{display:block;width:100%;height:100%;object-fit:cover;border-radius:14px;border:1px solid rgba(255,255,255,.25);box-shadow:0 18px 40px rgba(0,0,0,.55);pointer-events:none;-webkit-user-drag:none}
+.lcard::before{content:"";position:absolute;left:50%;top:-16px;width:34px;height:26px;transform:translateX(-50%);border-radius:6px 6px 4px 4px;background:linear-gradient(90deg,#8d939c,#e9ecf0 45%,#7c828b);box-shadow:0 2px 6px rgba(0,0,0,.5);z-index:2}
+.lcard::after{content:"";position:absolute;inset:0;border-radius:14px;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.16) 48%,transparent 60%);pointer-events:none}
+.lan-hint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);font-size:11px;color:var(--muted);white-space:nowrap}
+@media (max-width:760px){.lan{position:relative;right:auto;width:100%;max-width:360px;height:470px;margin:0 auto}}
+@media (max-width:760px){
+  #hero{grid-template-columns:1fr;padding:84px 6vw 20px;text-align:left}
+  .d-shape{width:70%;margin-left:-6vw}
+  .about-grid,.contact-grid,.two{grid-template-columns:1fr}
+  .portrait{max-width:300px;margin:0 auto}
+  .circle{max-width:220px}
+  nav a{padding:6px 12px}
+  .logo{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div id="loader" role="status" aria-label="Memuat">
+  <canvas></canvas>
+  <h2 class="silver">SELAMAT DATANG DI<b>PORTFOLIO SAYA</b></h2>
+  <div class="bar"><i></i></div>
+  <small>Ketuk untuk melewati</small>
+</div>
+<a class="logo" href="#hero" aria-label="Kembali ke atas"><img src="img/logo.webp" alt="Logo MR" width="46" height="46"></a>
+<nav aria-label="Navigasi utama">
+  <a href="#hero" class="on">Home</a>
+  <a href="#about">Profil</a>
+  <a href="#project">Project</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+<!-- HERO -->
+<section id="hero">
+  <div class="d-shape"><img src="img/profil-1.webp" alt="Foto Muhamad Ridzwansyah" width="900" height="1033"></div>
+  <div class="hero-text">
+    <h1 class="silver">PORTFOLIO 2026</small></h1>
+    <p class="role"><span id="typed">IT Support</span><span class="caret"></span></p>
+    <p class="who">Muhamad Ridzwansyah</p>
+    <div class="menu">
+      <a href="#project">Project</a>
+      <a href="#about">About Me</a>
+      <a href="#contact">Contact Person</a>
+    </div>
+  </div>
+  <div class="lan" id="lan" aria-label="Kartu ID interaktif, tarik untuk mengayunkan">
+    <canvas id="lcv"></canvas>
+    <div class="lcard" id="lcard"><img src="img/id-card.webp" alt="Kartu ID Muhamad Ridzwansyah, Teknik Informatika Universitas Pelita Bangsa" width="700" height="933"></div>
+    <span class="lan-hint">Tarik &amp; lepas kartunya</span>
+  </div>
+</section>
+
+<!-- PROFIL + RESUME -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="portrait" id="flip"><img class="main" src="img/profil-2.webp" alt="Muhamad Ridzwansyah memakai jas hitam" width="900" height="1620" loading="lazy"><img class="alt" src="img/profil-3.webp" alt="" width="700" height="1709" loading="lazy"><span class="hint">Arahkan kursor / ketuk foto</span></div>
+    <div class="about-text">
+      <p class="hello">Halo, saya</p>
+      <p class="name silver">MUHAMAD RIDZWANSYAH</p>
+      <h2 class="silver">TENTANG SAYA</h2>
+      <p>Lulusan S1 Teknik Informatika Universitas Pelita Bangsa (IPK 3.32). Saya berpengalaman menangani troubleshooting hardware dan software, instalasi sistem operasi, jaringan komputer, dan pembuatan website. Saat ini saya mengajar Teknik Komputer dan Jaringan di SMK.</p>
+
+      <h3>Software &amp; Skills</h3>
+      <div class="grp"><h5>IT Support</h5><div class="skills"><span>Troubleshooting HW/SW</span><span>Instalasi OS &amp; software</span><span>Perawatan PC, laptop, printer</span><span>Dukungan teknis</span></div></div>
+      <div class="grp"><h5>Network</h5><div class="skills"><span>MikroTik</span><span>Cisco</span><span>FTTH / Fiber optik</span><span>Firewall</span><span>Keamanan jaringan</span></div></div>
+      <div class="grp"><h5>Programing &amp; System Basisdata</h5><div class="skills"><span>Python</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>MySQL</span><span>SQL Server</span></div></div>
+      <div class="grp"><h5>Perangkat</h5><div class="skills"><span>Windows 10/11</span><span>Linux</span><span>Microsoft Office</span><span>VS Code</span><span>AnyDesk</span><span>TeamViewer</span><span>RDP</span><span>Figma</span><span>Canva</span><span>draw.io</span></div></div>
+
+      <h3>Work Experience</h3>
+      <ul class="list">
+        <li><b>Guru Produktif TKJ – SMK Amanah Bangsa</b><em>Juli 2026 – sekarang</em></li>
+        <li><b>Magang Staff IT – SDN Jatireja 03</b><em>Juni – Agustus 2024</em></li>
+        <li><b>Helper Produksi – PT Printek Perkasa 2</b><em>Juli – Oktober 2021</em></li>
+        <li><b>Pramuniaga – PT Indomarco Prismatama</b><em>Mei 2018 – Februari 2021</em></li>
+      </ul>
+
+      <div class="two">
+        <div>
+          <h3>Education</h3>
+          <ul class="list">
+            <li><b>Universitas Pelita Bangsa</b>S1 Informatics Engineering, 2025<br>IPK 3.32</li>
+          </ul>
+          <h3>Organization</h3>
+          <ul class="list">
+            <li><b>HIMATIF – Himpunan Mahasiswa Teknik</b><em>Februari – Juli 2022</em>Menyelenggarakan seminar dan workshop IT.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Certification</h3>
+          <ul class="list">
+            <li><b>Pelatihan Project Management</b></li>
+            <li><b>Fiber Optik – FTTH</b>PT Tower Bersama Infrastructure Tbk</li>
+            <li><b>MikroTik MTCNA</b><em>31 Des 2025</em></li>
+            <li><b>Dasar Microsoft Excel</b>ZenLEAP × Jobstreet<em>29 Des 2025</em></li>
+            <li><b>Excel untuk Admin</b>Jobstreet<em>4 Jan 2026</em></li>
+            <li><b>Microsoft Word</b>Microsoft Skills for Jobs<em>4 Jan 2026</em></li>
+            <li><b>Aplikasi Perkantoran Untuk Sektor Tertentu Basic Digital Skill</b>Digital Talent Scholarship 2026, BPT Komdigi<em>11–13 Mei 2026</em></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT -->
+<section id="project">
+  <div class="wrap">
+    <div class="head-c">
+      <h2 class="silver">RECAP PROJECT 2026</h2>
+      <p>Klik kartu untuk melihat tampilan penuh.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b data-count="5">0</b><span>Project</span></div>
+      <div class="stat"><b data-count="6">0</b><span>Certification</span></div>
+      <div class="stat"><b data-count="4">0</b><span>Work Experience</span></div>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Kategori portfolio">
+      <button role="tab" aria-selected="true" data-t="p-project">Project</button>
+      <button role="tab" aria-selected="false" data-t="p-cert">Certification</button>
+      <button role="tab" aria-selected="false" data-t="p-tech">Tech Stack</button>
+    </div>
+    <div class="panel on" id="p-project" role="tabpanel">
+    <div class="cards">
+      <button class="card" data-title="Website PPDB SDN Jatireja 03">
+        <img src="img/project-sdn-jatireja.webp" alt="Halaman utama website PPDB SDN Jatireja 03" loading="lazy">
+        <div><span class="tag">Website sekolah</span><h4>PPDB SDN Jatireja 03</h4><p>Halaman penerimaan peserta didik baru dengan galeri kegiatan sekolah, login peserta dan guru, serta tombol pendaftaran.</p></div>
+      </button>
+      <button class="card" data-title="Desain aplikasi AyoBelajar">
+        <img src="img/project-ayobelajar.webp" alt="Desain beranda aplikasi AyoBelajar" loading="lazy">
+        <div><span class="tag">Desain UI</span><h4>AyoBelajar</h4><p>Desain aplikasi belajar di Figma: pilih mata pelajaran, level dan XP, latihan soal, dan fitur mencari guru privat.</p></div>
+      </button>
+      <button class="card" data-title="Wireframe dashboard Dokter Lampu">
+        <img src="img/project-dokter-lampu.webp" alt="Wireframe dashboard Dokter Lampu" loading="lazy">
+        <div><span class="tag">Wireframe</span><h4>Dashboard Dokter Lampu</h4><p>Rancangan dashboard toko lampu: saldo bulanan, penjualan harian, retur dan keluhan, stok, serta riwayat pembayaran.</p></div>
+      </button>
+      <button class="card" data-title="Dashboard admin Family">
+        <img src="img/project-family.webp" alt="Halaman daftar mobil pada dashboard Family" loading="lazy">
+        <div><span class="tag">Dashboard admin</span><h4>Family AutoCars – Daftar Mobil</h4><p>Panel admin dengan tabel data mobil, pencarian, filter merek, dan menu pemesanan, transaksi, invoice, serta laporan penjualan.</p></div>
+      </button>
+      <button class="card" data-title="Dashboard Laundry Syariah">
+        <img src="img/project-laundry.webp" alt="Dashboard Laundry Syariah" loading="lazy">
+        <div><span class="tag">Dashboard</span><h4>Laundry Syariah</h4><p>Dashboard dengan total saldo bulan ini, pendapatan harian, grafik penjualan, dan riwayat pembayaran.</p></div>
+      </button>
+    </div>
+    </div>
+    <div class="panel" id="p-cert" role="tabpanel">
+      <div class="cards">
+        <button class="card c" data-title="Sertifikat Pelatihan Dasar Microsoft Excel"><img src="img/cert-excel-dasar.webp" alt="Sertifikat Pelatihan Dasar Microsoft Excel – ZenLEAP × Jobstreet, 29/12/2025" loading="lazy"><div><span class="tag">Sertifikat</span><h4>Pelatihan Dasar Microsoft Excel</h4><p>ZenLEAP × Jobstreet · 29 Des 2025</p></div></button>
+        <button class="card c" data-title="Sertifikat Excel untuk Admin"><img src="img/cert-excel-admin.webp" alt="Sertifikat Excel untuk Admin – Jobstreet, 4/1/2026" loading="lazy"><div><span class="tag">Sertifikat</span><h4>Excel untuk Admin</h4><p>Jobstreet · 4 Jan 2026</p></div></button>
+        <button class="card c" data-title="Sertifikat Microsoft Word"><img src="img/cert-word.webp" alt="Sertifikat Microsoft Skills for Jobs: Tingkatkan Karirmu dengan Microsoft Word, 4/1/2026" loading="lazy"><div><span class="tag">Sertifikat</span><h4>Microsoft Word</h4><p>Microsoft Skills for Jobs · 4 Jan 2026</p></div></button>
+        <button class="card c" data-title="Sertifikat Fiber Optik"><img src="img/cert-fiber-optik.webp" alt="Sertifikat Pelatihan Kurikulum Unggulan Fiber Optik FTTH – PT Tower Bersama Infrastructure Tbk" loading="lazy"><div><span class="tag">Sertifikat</span><h4>Fiber Optik – FTTH</h4><p>PT Tower Bersama Infrastructure Tbk</p></div></button>
+        <button class="card c" data-title="Sertifikat MikroTik MTCNA"><img src="img/cert-mikrotik.webp" alt="Sertifikat MikroTik Certified Network Associate (MTCNA), 31/12/2025" loading="lazy"><div><span class="tag">Sertifikat</span><h4>MikroTik MTCNA</h4><p>MikroTik Certified Network Associate · 31 Des 2025</p></div></button>
+        <button class="card c" data-title="Sertifikat Aplikasi Perkantoran Untuk Sektor Tertentu" data-imgs="img/cert-perkantoran-1.webp,img/cert-perkantoran-2.webp"><img src="img/cert-perkantoran-1.webp" alt="Sertifikat Pelatihan Aplikasi Perkantoran Untuk Sektor Tertentu Basic Digital Skill, Digital Talent Scholarship 2026, BPT Komdigi" loading="lazy"><div><span class="tag">Sertifikat · 2 halaman</span><h4>Aplikasi Perkantoran</h4><p>Digital Talent Scholarship 2026 – BPT Komdigi · 11–13 Mei 2026</p></div></button>
+      </div>
+    </div>
+    <div class="panel" id="p-tech" role="tabpanel"><div class="techs"><div class="tile"><span class="lg"><img src="img/tech/html.svg" alt="" width="34" height="34" loading="lazy"></span>HTML</div><div class="tile"><span class="lg"><img src="img/tech/css.svg" alt="" width="34" height="34" loading="lazy"></span>CSS</div><div class="tile"><span class="lg"><img src="img/tech/javascript.svg" alt="" width="34" height="34" loading="lazy"></span>JavaScript</div><div class="tile"><span class="lg"><img src="img/tech/python.svg" alt="" width="34" height="34" loading="lazy"></span>Python</div><div class="tile"><span class="lg"><img src="img/tech/mysql.svg" alt="" width="34" height="34" loading="lazy"></span>MySQL</div><div class="tile"><span class="lg"><img src="img/tech/sqlserver.svg" alt="" width="34" height="34" loading="lazy"></span>SQL Server</div><div class="tile"><span class="lg"><img src="img/tech/mikrotik.svg" alt="" width="34" height="34" loading="lazy"></span>MikroTik</div><div class="tile"><span class="lg"><img src="img/tech/cisco.svg" alt="" width="34" height="34" loading="lazy"></span>Cisco</div><div class="tile"><span class="lg"><img src="img/tech/linux.svg" alt="" width="34" height="34" loading="lazy"></span>Linux</div><div class="tile"><span class="lg"><img src="img/tech/windows.svg" alt="" width="34" height="34" loading="lazy"></span>Windows</div><div class="tile"><span class="lg"><img src="img/tech/figma.svg" alt="" width="34" height="34" loading="lazy"></span>Figma</div><div class="tile"><span class="lg"><img src="img/tech/canva.svg" alt="" width="34" height="34" loading="lazy"></span>Canva</div><div class="tile"><span class="lg"><img src="img/tech/drawio.svg" alt="" width="34" height="34" loading="lazy"></span>draw.io</div><div class="tile"><span class="lg"><img src="img/tech/vscode.svg" alt="" width="34" height="34" loading="lazy"></span>VS Code</div></div></div>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="circle"><img src="img/profil-3.webp" alt="Muhamad Ridzwansyah" width="700" height="1709" loading="lazy"></div>
+      <div>
+        <h2 class="silver">HUBUNGI SAYA</h2>
+        <p>Butuh IT support, bantuan jaringan, atau website? Hubungi saya lewat salah satu link di bawah.</p>
+        <div class="links">
+          <a class="ico" href="mailto:muhamadridzwansyah@gmail.com" aria-label="Email" title="Email"><img src="img/icon-email.webp" alt="" width="26" height="26"></a>
+          <a class="ico" href="https://wa.me/qr/N37EJNM2B3XZN1" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><img src="img/icon-whatsapp.webp" alt="" width="26" height="26"></a>
+          <a class="ico" href="https://www.instagram.com/flemdkhs_" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><img src="img/icon-instagram.webp" alt="" width="26" height="26"></a>
+          <a class="ico" href="https://www.linkedin.com/in/moch-ridzwan-syah-b02018229" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><img src="img/icon-linkedin.webp" alt="" width="26" height="26"></a>
+        </div>
+        <p class="thanks silver">TERIMA KASIH 2026</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><img src="img/logo.webp" alt="" width="36" height="36"><span>© 2026 Muhamad Ridzwansyah</span></footer>
+
+<dialog id="viewer" aria-label="Tampilan project">
+  <div class="bar"><strong id="vt"></strong><button type="button" id="vc">Tutup</button></div>
+  <div id="vbody"></div>
+</dialog>
+
+<script>
+// Pill navigasi aktif sesuai bagian yang terlihat
+const links=[...document.querySelectorAll('nav a')];
+const io=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting){
+    links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));
+  }});
+},{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('main section').forEach(s=>io.observe(s));
+
+// Tampilan penuh project
+const dlg=document.getElementById('viewer'),vbody=document.getElementById('vbody'),vt=document.getElementById('vt');
+document.querySelectorAll('.card').forEach(c=>c.addEventListener('click',()=>{
+  const im=c.querySelector('img');
+  const list=(c.dataset.imgs||im.getAttribute('src')).split(',');
+  vbody.replaceChildren(...list.map((s,i)=>{
+    const x=new Image();x.src=s.trim();
+    x.alt=im.alt+(list.length>1?' (halaman '+(i+1)+')':'');return x;
+  }));
+  vt.textContent=c.dataset.title;
+  dlg.showModal();dlg.scrollTop=0;
+}));
+document.getElementById('vc').addEventListener('click',()=>dlg.close());
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+
+// Loader petir
+(function(){
+  const ld=document.getElementById('loader'),cv=ld.querySelector('canvas'),cx=cv.getContext('2d');
+  const still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  document.body.classList.add('loading');
+  function fit(){cv.width=innerWidth;cv.height=innerHeight}fit();addEventListener('resize',fit);
+  function bolt(){let x=Math.random()*cv.width,y=0;cx.beginPath();cx.moveTo(x,y);
+    while(y<cv.height){x+=(Math.random()-.5)*90;y+=Math.random()*38+10;cx.lineTo(x,y)}
+    cx.strokeStyle='#d8ecff';cx.lineWidth=2;cx.shadowColor='#3b9cff';cx.shadowBlur=20;cx.stroke()}
+  const iv=still?0:setInterval(()=>{cx.clearRect(0,0,cv.width,cv.height);if(Math.random()<.75)bolt()},170);
+  let done=false;
+  function close(){if(done)return;done=true;clearInterval(iv);ld.classList.add('out');document.body.classList.remove('loading');setTimeout(()=>ld.remove(),700)}
+  ld.addEventListener('click',close);setTimeout(close,still?300:2400);
+})();
+
+// Teks peran mengetik
+(function(){
+  const el=document.getElementById('typed');
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  const roles=['IT Support','Network Support','Web Developer','Guru TKJ'];let r=0,c=0,del=false;
+  (function tick(){const w=roles[r];c+=del?-1:1;el.textContent=w.slice(0,c);
+    let d=del?45:90;
+    if(!del&&c===w.length){del=true;d=1400}else if(del&&c===0){del=false;r=(r+1)%roles.length;d=300}
+    setTimeout(tick,d)})();
+})();
+
+// Muncul saat scroll + hitung angka
+(function(){
+  const sel='.head-c,.stat,.cert,.tile,.card,.about-text>*,.contact-grid>*';
+  document.querySelectorAll(sel).forEach(e=>e.classList.add('rv'));
+  const ro=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;
+    e.target.classList.add('in');ro.unobserve(e.target);const tg=e.target;setTimeout(()=>tg.classList.remove('rv','in'),900);
+    const n=e.target.querySelector('[data-count]');if(n){const t=+n.dataset.count;let i=0;
+      const s=setInterval(()=>{n.textContent=++i;if(i>=t)clearInterval(s)},220)}
+  }),{threshold:.15});
+  document.querySelectorAll('.rv').forEach(e=>ro.observe(e));
+})();
+
+// Foto berganti (ketuk di HP)
+document.getElementById('flip').addEventListener('click',e=>e.currentTarget.classList.toggle('flip'));
+
+// Tab portfolio
+document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected',x===b));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===b.dataset.t));
+  document.querySelectorAll('#'+b.dataset.t+' .rv').forEach(e=>e.classList.remove('rv','in'));
+}));
+
+
+// Lanyard interaktif (fisika verlet 2D)
+(function(){
+  const lan=document.getElementById('lan'),cv=document.getElementById('lcv'),cx=cv.getContext('2d'),card=document.getElementById('lcard');
+  if(!lan||!cx)return;
+  const SEG=8;let W,H,cw,ch,seg,P=[],B,ptr=null,grab=0.35,run=true,dpr=1;
+  function init(){
+    const r=lan.getBoundingClientRect();W=r.width;H=r.height;dpr=Math.min(devicePixelRatio||1,2);
+    cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);
+    cw=Math.min(W*.62,210);ch=cw*1.333;seg=Math.min(30,Math.max(16,(H-ch-70)/SEG));
+    card.style.width=cw+'px';card.style.height=ch+'px';card.style.left=(-cw/2)+'px';
+    P=[];for(let i=0;i<=SEG;i++){const x=W/2,y=i*seg;P.push({x,y,px:x,py:y})}
+    const t=P[SEG];B={x:t.x,y:t.y+ch,px:t.x,py:t.y+ch};
+    if(!matchMedia('(prefers-reduced-motion:reduce)').matches){B.px-=26;B.x+=0}
+  }
+  function d2(a,b,L,wa,wb){const dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy)||1e-6,f=(d-L)/d,s=wa+wb;
+    a.x+=dx*f*wa/s;a.y+=dy*f*wa/s;b.x-=dx*f*wb/s;b.y-=dy*f*wb/s}
+  function step(){
+    const all=P.concat(B);
+    for(let i=1;i<all.length;i++){const p=all[i],vx=(p.x-p.px)*.992,vy=(p.y-p.py)*.992;p.px=p.x;p.py=p.y;p.x+=vx;p.y+=vy+.55}
+    if(ptr){const T=P[SEG],gx=T.x+(B.x-T.x)*grab,gy=T.y+(B.y-T.y)*grab,dx=ptr.x-gx,dy=ptr.y-gy;
+      T.x+=dx*(1-grab)*.5;T.y+=dy*(1-grab)*.5;B.x+=dx*grab*.5;B.y+=dy*grab*.5}
+    for(let k=0;k<12;k++){
+      P[0].x=W/2;P[0].y=0;
+      for(let i=0;i<SEG;i++)d2(P[i],P[i+1],seg,i===0?0:1,1);
+      d2(P[SEG],B,ch,1,1);
+    }
+    P[0].x=W/2;P[0].y=0;
+    for(const p of all){p.x=Math.max(cw/2,Math.min(W-cw/2,p.x));p.y=Math.max(0,Math.min(H-8,p.y))}
+  }
+  function draw(){
+    cx.clearRect(0,0,W,H);
+    cx.lineJoin='round';cx.lineCap='butt';
+    cx.beginPath();cx.moveTo(P[0].x,P[0].y);
+    for(let i=1;i<=SEG;i++){const m={x:(P[i-1].x+P[i].x)/2,y:(P[i-1].y+P[i].y)/2};cx.quadraticCurveTo(P[i-1].x,P[i-1].y,m.x,m.y)}
+    cx.lineTo(P[SEG].x,P[SEG].y);
+    cx.strokeStyle='#0a0a0e';cx.lineWidth=16;cx.stroke();
+    cx.strokeStyle='rgba(255,255,255,.14)';cx.lineWidth=1.5;cx.stroke();
+    const T=P[SEG],a=Math.atan2(B.y-T.y,B.x-T.x)-Math.PI/2;
+    card.style.transform=`translate(${T.x}px,${T.y}px) rotate(${a}rad)`;
+  }
+  function loop(){if(run){step();draw()}requestAnimationFrame(loop)}
+  const pos=e=>{const r=lan.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}};
+  card.addEventListener('pointerdown',e=>{
+    card.setPointerCapture(e.pointerId);card.classList.add('drag');
+    const T=P[SEG],p=pos(e),ax=B.x-T.x,ay=B.y-T.y,L=ax*ax+ay*ay||1;
+    grab=Math.max(0,Math.min(1,((p.x-T.x)*ax+(p.y-T.y)*ay)/L));ptr=p;e.preventDefault()});
+  card.addEventListener('pointermove',e=>{if(ptr)ptr=pos(e)});
+  const end=()=>{ptr=null;card.classList.remove('drag')};
+  card.addEventListener('pointerup',end);card.addEventListener('pointercancel',end);
+  new IntersectionObserver(es=>{run=es[0].isIntersecting}).observe(lan);
+  addEventListener('resize',init);
+  init();loop();
+})();
+</script>
+</body>
+</html>
